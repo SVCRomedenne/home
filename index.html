@@ -19,6 +19,8 @@
       color: white;
       display: flex;
       flex-direction: row;
+      min-height: 100vh;
+      flex-direction: column;
     }
 
     /* Barre latérale */
@@ -39,9 +41,23 @@
       z-index: 1000;
     }
 
+    /* Animation du logo */
+    @keyframes fadeInSlide {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     nav img {
-      width: 100px;
+      width: 350px;
       margin-bottom: 30px;
+      opacity: 0;
+      animation: fadeInSlide 2s ease-out forwards;
     }
 
     nav ul {
@@ -75,9 +91,6 @@
       margin-left: 220px;
       padding: 40px;
       flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
     }
 
     h1 {
@@ -90,23 +103,31 @@
       margin-top: 10px;
     }
 
+    /* Footer centré en bas */
     footer {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
       font-size: 12px;
       color: #e0e0e0;
-      text-align: centrer;
-      margin-top: 80px;
-      padding-bottom: 20px;
+      text-align: center;
+      width: 100%;
     }
 
     /* Responsive */
     @media screen and (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
       nav {
         width: 100%;
         height: auto;
         flex-direction: row;
         justify-content: space-between;
         border-radius: 0;
-        padding: 0px;
+        padding: 10px;
         position: static;
       }
 
@@ -137,45 +158,18 @@
         padding: 20px;
       }
 
+      footer {
+        position: relative;
+        left: 0;
+        width: 100%;
+      }
+
       h1 {
         font-size: 28px;
       }
 
       h2 {
         font-size: 18px;
-      }
-    }
-  </style>
-</head>
-  <head>
-  <!-- ... meta et style ... -->
-  <style>
-    /* ... styles précédents ... */
-
-    /* Animation du logo */
-    @keyframes fadeInSlide {
-      0% {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    nav img {
-      width: 350px;
-      margin-bottom: 30px;
-      opacity: 0;
-      animation: fadeInSlide 2s ease-out forwards;
-    }
-
-    /* Responsive logo */
-    @media screen and (max-width: 768px) {
-      nav img {
-        width: 60px;
-        margin: 0 10px;
       }
     }
   </style>
@@ -198,14 +192,14 @@
   <div class="main">
     <h1>Bienvenue sur le site du club de volley du SVC Romedenne</h1>
     <h2></h2>
-
-    <!-- Tu peux ajouter du contenu ici -->
-
-    <footer>
-      <p>Copyright @ Romedenne 2025</p>
-      <p>Mise à jour le 23 avril 2025</p>
-    </footer>
+    <!-- Tu peux ajouter plus de contenu ici -->
   </div>
+
+  <!-- Footer centré -->
+  <footer>
+    <p>Copyright © Romedenne 2025</p>
+    <p>Mise à jour le 23 avril 2025</p>
+  </footer>
 
 </body>
 </html>

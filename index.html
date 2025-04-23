@@ -1,111 +1,29 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home</title>
-
-  <!#Fond>
-  
- <style>
-  body {
-    background-image: url(https://github.com/SVCRomedenne/home/blob/main/Fond%20Jaune.png?raw=true);
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    font-family: Arial, sans-serif;
-    color: white;
-    text-align: center;
-    height: 100vh;
-    padding: 0px;
-  
-</style>
-</head>
-
-<!#Structure>
-  
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Club de Volley - SVC Romedenne</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    /* Titre principal */
-    h1 {
-      font-size: 50px;
-      color: #0077cc; /* Bleu du club */
-      margin-top: 40px;
-      text-align: center;
-    }
-
-    /* Sous-titre */
-    h2 {
-      font-size: 24px;
-      color: #555;
-      margin-top: 10px;
-      text-align: center;
-    }
-
-    /* Texte de copyright en bas */
-    footer {
-      font-size: 12px;
-      color: #888;
-      position: fixed;
-      bottom: 10px;
-      width: 100%;
-      text-align: center;
-    }
-
-    footer p {
-      margin: 0;
-    }
-  </style>
-</head>
-<body>
-  <h1>Bienvenue sur le site du club de volley du SVC Romedenne</h1>
-  <h2></h2>
-
-  <!-- Contenu principal de ton site ici -->
-
-  <footer>
-    <p>Copyright @ Romedenne 2025</p>
-    <p>Mise à jour le 23 avril 2025</p>
-  </footer>
-</body>
-
-
-  <!#Barre de navigation>
-
- <!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SVC Romedenne - Menu vertical design</title>
+  <title>SVC Romedenne</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       display: flex;
+      background-image: url('https://github.com/SVCRomedenne/home/blob/main/Fond%20Jaune.png?raw=true');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
     }
 
-    /* Menu vertical */
+    /* Barre de navigation verticale */
     nav {
       width: 220px;
       height: 100vh;
-      background: linear-gradient(to bottom, #0077cc, #005fa3); /* Dégradé */
+      background: linear-gradient(to bottom, #0077cc, #005fa3);
       padding-top: 40px;
       position: fixed;
-      box-shadow: 3px 0 8px rgba(0, 0, 0, 0.2); /* Ombre à droite */
+      box-shadow: 3px 0 8px rgba(0, 0, 0, 0.2);
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
       display: flex;
@@ -131,7 +49,7 @@
       font-size: 18px;
       text-decoration: none;
       transition: background 0.3s, transform 0.2s;
-      border-radius: 0 20px 20px 0; /* Bord arrondi à droite */
+      border-radius: 0 20px 20px 0;
     }
 
     nav ul li a:hover {
@@ -139,15 +57,40 @@
       transform: translateX(5px);
     }
 
-    /* Contenu à droite */
+    /* Contenu principal */
     .main {
       margin-left: 220px;
       padding: 40px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 50px;
+      color: #ffffff;
+      margin-top: 40px;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #f0f0f0;
+      margin-top: 10px;
+    }
+
+    footer {
+      font-size: 12px;
+      color: #e0e0e0;
+      margin-top: 80px;
+    }
+
+    footer p {
+      margin: 4px 0;
     }
   </style>
 </head>
+
 <body>
 
+  <!-- Navigation -->
   <nav>
     <ul>
       <li><a href="index.html">Accueil</a></li>
@@ -155,10 +98,21 @@
       <li><a href="Horaires entrainements.html">Horaires entrainements</a></li>
       <li><a href="Equipes.html">Equipes</a></li>
       <li><a href="Contacts.html">Contacts</a></li>
-    
     </ul>
   </nav>
 
+  <!-- Contenu principal -->
+  <div class="main">
+    <h1>Bienvenue sur le site du club de volley du SVC Romedenne</h1>
+    <h2>Horaires entraînements</h2>
+
+    <!-- Tu peux ajouter plus de contenu ici -->
+
+    <footer>
+      <p>Copyright @ Romedenne 2025</p>
+      <p>Mise à jour le 23 avril 2025</p>
+    </footer>
+  </div>
+
 </body>
 </html>
-

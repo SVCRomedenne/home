@@ -142,6 +142,39 @@
     }
   </style>
 </head>
+  <head>
+  <!-- ... meta et style ... -->
+  <style>
+    /* ... styles précédents ... */
+
+    /* Animation du logo */
+    @keyframes fadeInSlide {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    nav img {
+      width: 100px;
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: fadeInSlide 1.2s ease-out forwards;
+    }
+
+    /* Responsive logo */
+    @media screen and (max-width: 768px) {
+      nav img {
+        width: 60px;
+        margin: 0 10px;
+      }
+    }
+  </style>
+</head>
 <body>
 
   <!-- Barre de navigation -->

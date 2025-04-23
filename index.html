@@ -199,7 +199,12 @@
   <footer>
     <p>Copyright © Romedenne 2025</p>
     <p>Mise à jour le 23 avril 2025</p>
+    <p id="update-date"></p>
   </footer>
-
+<script>
+  const date = new Date();
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  document.getElementById("update-date").textContent = "Mise à jour le " + date.toLocaleDateString("fr-FR", options);
+</script>
 </body>
 </html>

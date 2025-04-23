@@ -117,47 +117,52 @@
 
     /* Responsive */
     @media screen and (max-width: 768px) {
-  body {
-    flex-direction: column;
-  }
+      body {
+        flex-direction: column;
+      }
 
-  nav {
-    width: 220px;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: fixed;
-    top: 0;
-    left: 0;
-    border-radius: 0;
-    padding: 20px 0;
-  }
+      nav {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        border-radius: 0;
+        padding: 10px;
+        position: static;
+      }
 
-  nav img {
-    width: 200px;
-    margin-bottom: 20px;
-  }
+      nav img {
+        width: 60px;
+        margin: 0 10px;
+      }
 
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
+      nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: auto;
+      }
 
-  nav ul li {
-    margin: 5px 0;
-  }
+      nav ul li {
+        margin: 0 5px;
+      }
 
-  .main {
-    margin-left: 220px;
-    padding: 20px;
-  }
+      nav ul li a {
+        padding: 10px 15px;
+        font-size: 16px;
+        border-radius: 5px;
+      }
 
-  footer {
-    position: relative;
-    left: 0;
-    width: 100%;
-  }
-}
+      .main {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      footer {
+        position: relative;
+        left: 0;
+        width: 100%;
+      }
 
       h1 {
         font-size: 28px;

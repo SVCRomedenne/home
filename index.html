@@ -84,49 +84,63 @@
 
   <!#Barre de navigation>
 
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVC Romedenne - Menu vertical design</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       display: flex;
     }
 
-    /* Barre de navigation verticale */
+    /* Menu vertical */
     nav {
-      width: 200px;
-      height: 100vh; /* toute la hauteur de l’écran */
-      background-color: #0077cc;
-      padding-top: 20px;
-      position: fixed; /* elle reste en place au défilement */
+      width: 220px;
+      height: 100vh;
+      background: linear-gradient(to bottom, #0077cc, #005fa3); /* Dégradé */
+      padding-top: 40px;
+      position: fixed;
+      box-shadow: 3px 0 8px rgba(0, 0, 0, 0.2); /* Ombre à droite */
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     nav ul {
-      list-style-type: none;
+      list-style: none;
       padding: 0;
       margin: 0;
+      width: 100%;
     }
 
     nav ul li {
-      margin-bottom: 20px;
+      width: 100%;
     }
 
     nav ul li a {
       display: block;
+      padding: 15px 25px;
       color: white;
-      text-decoration: none;
-      padding: 12px 20px;
       font-size: 18px;
-      border-radius: 5px;
-      transition: background-color 0.3s;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+      border-radius: 0 20px 20px 0; /* Bord arrondi à droite */
     }
 
     nav ul li a:hover {
-      background-color: #005fa3;
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateX(5px);
     }
 
-    /* Contenu principal décalé pour ne pas être caché derrière la nav */
+    /* Contenu à droite */
     .main {
-      margin-left: 200px; /* même largeur que la nav */
+      margin-left: 220px;
       padding: 40px;
     }
   </style>

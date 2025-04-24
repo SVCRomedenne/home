@@ -1,1 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SVC Romedenne Sponsors</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://github.com/SVCRomedenne/home/blob/main/Fond%20Bleu.png?raw=true');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Barre latérale */
+    nav {
+      width: 220px;
+      background: linear-gradient(to bottom, #0077cc, #005fa3);
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+      box-shadow: 3px 0 8px rgba(0, 0, 0, 0.2);
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      z-index: 1000;
+    }
+
+    nav img {
+      width: 350px;
+      margin-bottom: 30px;
+      opacity: 0;
+      animation: fadeInSlide 2s ease-out forwards;
+    }
+
+    @keyframes fadeInSlide {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 15px 25px;
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+      border-radius: 0 20px 20px 0;
+    }
+
+    nav ul li a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateX(5px);
+    }
+
+    /* Contenu principal */
+    .main {
+      margin-left: 220px;
+      padding: 40px;
+      flex-grow: 1;
+    }
+
+    h1 {
+      font-size: 50px;
+      margin-top: 0;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    /* Footer centré en bas */
+    footer {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 12px;
+      color: #e0e0e0;
+      text-align: center;
+      width: 100%;
+    }
+
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      nav {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        border-radius: 0;
+        position: relative;
+        padding: 10px 0;
+      }
+
+      nav img {
+        width: 150px;
+        margin: 10px auto;
+      }
+
+      nav ul {
+        width: 100%;
+      }
+
+      nav ul li a {
+        font-size: 16px;
+        padding: 10px 20px;
+        text-align: center;
+      }
+
+      .main {
+        margin-left: 0;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+
+      footer {
+        position: relative;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barre de navigation -->
+  <nav>
+    <img src="https://github.com/SVCRomedenne/home/blob/main/Logo%20calque.png?raw=true" alt="Logo SVC" />
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="Calendrier.html">Calendrier</a></li>
+      <li><a href="Horaires entrainements.html">Horaires</a></li>
+      <li><a href="Equipes.html">Équipes</a></li>
+      <li><a href="Evenements.html">Evènements</a></li>
+      <li><a href="Comite.html">Comité</a></li>
+      <li><a href="Sponsors.html">Sponsors</a></li>
+      <li><a href="Contacts.html">Contacts</a></li>
+      <li><a href="Galerie.html">Galerie</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenu principal -->
+  <div class="main">
+    <h1>Nos Sponsors</h1>
+    <div style="margin-top: 30px;">
+      <p>Nous remercions tout nos sponsors.</p>
+      <p>Sans eux notre club ne pourrait exister.</p>
+    </div>
+  </div>
+
+  <!-- Footer centré -->
+  <footer>
+    <p>Copyright © Romedenne 2025</p>
+    <p id="update-date"></p>
+  </footer>
+  <script>
+    const date = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById("update-date").textContent = "Mise à jour le " + date.toLocaleDateString("fr-FR", options);
+  </script>
+</body>
+</html>

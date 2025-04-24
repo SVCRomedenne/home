@@ -94,9 +94,36 @@
     h2 {
       font-size: 24px;
     }
+    .main img {
+      width: 15%;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover; /* pour que l'image remplisse sans se déformer */
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+
+    .gallery img:hover {
+      transform: scale(2);
+      z-index: 9999;
+    }
 
     /* Footer centré en bas */
-     footer {
+      footer {
       line-height: 1;
       position: fixed;
       bottom: 0;
@@ -106,7 +133,8 @@
       color: #e0e0e0;
       text-align: center;
       padding: 10px 0;
-    }
+      margin-top: 150px; /* espace avec le contenu */
+      }
 
     /* Responsive */
     @media screen and (max-width: 768px) {
@@ -159,7 +187,7 @@
   <nav>
     <img src="https://github.com/SVCRomedenne/home/blob/main/Logo%20calque.png?raw=true" alt="Logo SVC" />
     <ul>
-     <li><a href="index.html">Accueil</a></li>
+      <li><a href="index.html">Accueil</a></li>
       <li><a href="Calendrier.html">Calendrier</a></li>
       <li><a href="Horaires entrainements.html">Horaires</a></li>
       <li><a href="Equipes.html">Équipes</a></li>
@@ -175,8 +203,31 @@
   <div class="main">
     <h1>Nos Sponsors</h1>
     <div style="margin-top: 30px;">
-      <p>Nous remercions tous nos sponsors.</p>
-      <p>Sans eux notre club ne pourrait exister.</p>
+      <p>Nous remercions tous nos sponsors, sans eux notre club ne pourrait exister</p>
+       <div class="gallery">
+       <img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_001.png?raw=true/300x200" alt="Sponsors 1">
+        <img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_001.png?raw=true/300x200" alt="Sponsors 2">
+        <img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_003.png?raw=true/300x200" alt="Sponsors 3">
+        <img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_004.png?raw=true/300x200" alt="Sponsors 4">
+        <img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_005.png?raw=true/300x200" alt="Sponsors 5">
+        <img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_006.png?raw=true/300x200" alt="Sponsors 6">
+        <img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_007.png?raw=true/300x200" alt="Sponsors 7">
+        <img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_008.png?raw=true/300x200" alt="Sponsors 8">
+        <img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_009.png?raw=true/300x200" alt="Sponsors 9">
+        <img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_010.png?raw=true/300x200" alt="Sponsors 10">
+        <img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_011.png?raw=true/300x200" alt="Sponsors 11">
+		    <img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_012.png?raw=true/300x200" alt="Sponsors 12">
+		    <img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_013.png?raw=true/300x200" alt="Sponsors 13">
+		    <img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_014.png?raw=true/300x200" alt="Sponsors 14">
+	    	<img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_015.png?raw=true/300x200" alt="Sponsors 15">
+		    <img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_016.png?raw=true/300x200" alt="Sponsors 16">
+	    	<img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_017.png?raw=true/300x200" alt="Sponsors 17">
+	    	<img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_018.png?raw=true/300x200" alt="Sponsors 18">
+	    	<img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_019.png?raw=true/300x200" alt="Sponsors 19">
+	    	<img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_020.png?raw=true/300x200" alt="Sponsors 20">
+      </div>
+  <!-- Tu peux ajouter plus de contenu ici -->
+  </div>
     </div>
   </div>
 

@@ -101,14 +101,15 @@
     }
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
       margin-top: 30px;
     }
 
     .gallery img {
-      width: 300px;
-      height: 200px;
+      width: 100%;
+      height: auto;
       object-fit: cover; /* pour que l'image remplisse sans se déformer */
       border-radius: 10px;
       transition: transform 0.3s ease;
@@ -116,7 +117,7 @@
     }
 
     .gallery img:hover {
-      transform: scale(1.05);
+      transform: scale(1.5);
     }
 
     /* Footer centré en bas */

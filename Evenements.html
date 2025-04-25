@@ -165,59 +165,74 @@
 
     /* Responsive */
     @media screen and (max-width: 768px) {
-      nav {
-        width: 100%;
-        height: auto;
-        flex-direction: column;
-        border-radius: 0;
-        position: relative;
-        padding: 10px 0;
-      }
+  nav {
+    position: relative; /* Corrigé : plus de fixed */
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    border-radius: 0;
+    padding: 10px 0;
+  }
 
-      nav img {
-        width: 150px;
-        margin: 10px auto;
-      }
+  nav img {
+    width: auto;
+    max-width: 80%; /* Corrigé */
+    height: auto;
+    margin: 10px auto;
+  }
 
-      nav ul {
-        width: 100%;
-      }
+  nav ul {
+    width: 100%;
+  }
 
-      nav ul li a {
-        font-size: 16px;
-        padding: 10px 20px;
-        text-align: center;
-      }
+  nav ul li a {
+    font-size: 16px;
+    padding: 10px 20px;
+    text-align: center;
+  }
 
-      .main {
-        margin-left: 0;
-        padding: 20px;
-      }
+  .main {
+    margin-left: 0; /* Corrigé */
+    padding: 20px;
+  }
 
-      .social-label {
-        margin-bottom: 8px;
-        text-align: center;
-      }
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Corrigé */
+    gap: 10px; /* Corrigé */
+    padding: 10px;
+  }
 
-      .social-icons {
-        justify-content: center;
-        margin-bottom: 20px;
-      }
+  .gallery img {
+    width: 100%; /* Corrigé */
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
 
-       h1 {
-        font-size: 28px;
-      }
+  .social-label {
+    margin-bottom: 8px;
+    text-align: center;
+  }
 
-      h2 {
-        font-size: 18px;
-      }
+  .social-icons {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
 
-      footer {
-        position: relative;
-        left: 0;
-        width: 100%;
-      }
-    }
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  footer {
+    position: relative; /* Corrigé : plus de fixed */
+    width: 100%;
+    margin-top: 40px; /* Corrigé */
+  }
+}
   </style>
 </head>
 <body>

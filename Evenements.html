@@ -79,6 +79,32 @@
       transform: translateX(5px);
     }
 
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 6px;
+      margin-bottom: 30px;
+    }
+
+    .social-icon {
+      width: 32px;
+      height: 32px;
+      filter: none; /* supprime le noir et blanc */
+      transition: transform 0.3s ease;
+    }
+
+    .social-icon:hover {
+      transform: scale(1.5);
+    }
+
+    nav > .social-label {
+      color: white;
+      font-size: 14px;
+      margin-top: auto;
+      margin-bottom: 6px;
+    }
+    
     /* Contenu principal */
     .main {
       margin-left: 220px;
@@ -183,7 +209,17 @@
       <li><a href="Comite.html">Comité</a></li>
       <li><a href="Contacts.html">Contacts</a></li>
     </ul>
-  </nav>
+    <!-- Icônes Réseaux sociaux -->
+<div class="social-label">Suivez-nous :</div>
+<div class="social-icons">
+  <a href="https://www.facebook.com/svc.romedenne?locale=fr_FR" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="social-icon">
+  </a>
+  <a href="https://www.instagram.com/svc_romedenne/" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" class="social-icon">
+  </a>
+</div>
+</nav>
 
   <!-- Contenu principal -->
   <div class="main">

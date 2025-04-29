@@ -7,7 +7,7 @@
   <style>
     * {
       box-sizing: border-box;
-      }
+    }
 
     body {
       margin: 0;
@@ -19,9 +19,8 @@
       color: white;
       display: flex;
       min-height: 100vh;
-      }
+    }
 
-    /* Barre latérale */
     nav {
       width: 220px;
       background: linear-gradient(to bottom, #0077cc, #005fa3);
@@ -37,14 +36,14 @@
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
       z-index: 1000;
-      }
+    }
 
     nav img {
-      width: 350px;
+      width: 180px;
       margin-bottom: 30px;
       opacity: 0;
       animation: fadeInSlide 2s ease-out forwards;
-      }
+    }
 
     @keyframes fadeInSlide {
       0% {
@@ -55,7 +54,8 @@
         opacity: 1;
         transform: translateY(0);
       }
-    
+    }
+
     nav ul {
       list-style: none;
       padding: 0;
@@ -71,61 +71,52 @@
       text-decoration: none;
       transition: background 0.3s, transform 0.2s;
       border-radius: 0 20px 20px 0;
-      }
+    }
 
     nav ul li a:hover {
       background-color: rgba(255, 255, 255, 0.1);
       transform: translateX(5px);
-      }
-    
+    }
+
     .social-icons {
       display: flex;
       justify-content: center;
       gap: 10px;
       margin-top: 6px;
       margin-bottom: 30px;
-      }
+    }
 
     .social-icon {
       width: 32px;
       height: 32px;
-      filter: none;
       transition: transform 0.3s ease;
-      }
+    }
 
     .social-icon:hover {
       transform: scale(1.5);
-      }
+    }
 
     nav > .social-label {
       color: white;
       font-size: 14px;
       margin-top: auto;
       margin-bottom: 6px;
-      }
-    
-    /* Contenu principal */
+    }
+
     .main {
-      margin-left: 225px;
+      margin-left: 220px;
       padding: 40px;
       flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      color: #FFFFFF; 
-      z-index: 1;
-      }
+    }
 
     .fade-gallery {
-      position: absolute;
-      width: 1100px;
-      max-width: 1100px;
-      height: 800px;
-      max-height: 800px
-      margin-top: 20px;
-      margin-bottum: 20px;
-      margin-left: 400px;
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      height: 600px;
       overflow: hidden;
-      }
+      border-radius: 12px;
+    }
 
     .fade-gallery img {
       position: absolute;
@@ -134,18 +125,14 @@
       object-fit: cover;
       opacity: 0;
       transition: opacity 1.5s ease-in-out;
-      border-radius: 12px;
-      margin-bottom: 30px;
-      }
+    }
 
     .fade-gallery img.active {
       opacity: 1;
       z-index: 1;
-      }
+    }
 
-   /* Footer centré en bas */
     footer {
-      line-height: 1;
       position: fixed;
       bottom: 0;
       left: 0;
@@ -154,85 +141,64 @@
       color: #e0e0e0;
       text-align: center;
       padding: 10px 0;
-      }
-
-    .slides {
-      display: flex;
-      width: calc(100% * 4); /* si 6 images */
-      animation: scroll 36s linear infinite;
-      }
-
-    .slides img {
-      width: calc(100% / 6);
-      height: auto;
-      object-fit: cover;
-      border-radius: 10px;
-      }
-
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-      }
+    }
 
     @media (max-width: 768px) {
-      .presentation-container {
-      flex-direction: column;
-      align-items: center;
+      nav {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        border-radius: 0;
+        padding: 10px 0;
       }
-  
+
+      .main {
+        margin-left: 0;
+        margin-top: 120px;
+        padding: 20px;
+      }
+
+      .fade-gallery {
+        height: 300px;
+      }
+    }
   </style>
 </head>
 <body>
 
- <!-- Barre de navigation -->
+  <!-- Navigation -->
   <nav>
     <a href="index.html">
-    <img src="https://github.com/SVCRomedenne/home/blob/main/Logo%20calque.png?raw=true" alt="Logo SVC" />
+      <img src="https://github.com/SVCRomedenne/home/blob/main/Logo%20calque.png?raw=true" alt="Logo SVC" />
     </a>
     <ul>
-      <li><a href="YYYYpageTest.html">Presentation</a></li>
+      <li><a href="YYYYpageTest.html">Présentation</a></li>
     </ul>
-    
-     <!-- Icônes Réseaux sociaux -->
-<div class="social-label">Suivez-nous :</div>
-<div class="social-icons">
-  <a href="https://www.facebook.com/svc.romedenne?locale=fr_FR" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="social-icon">
-  </a>
-  <a href="https://www.instagram.com/svc_romedenne/" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" class="social-icon">
-  </a>
-</div>
+    <div class="social-label">Suivez-nous :</div>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/svc.romedenne?locale=fr_FR" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="social-icon">
+      </a>
+      <a href="https://www.instagram.com/svc_romedenne/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" class="social-icon">
+      </a>
+    </div>
   </nav>
 
-  <div class="main" 
-   <!-- Contenu principal -->
-   <div class="fade-gallery">
-       <img src="https://github.com/SVCRomedenne/home/blob/main/Gal_U15_ChampProv_2024_2025.png?raw=true">
-       <img src="https://github.com/SVCRomedenne/home/blob/main/U13_2024-2025.png?raw=true">
-       <img src="https://github.com/SVCRomedenne/home/blob/main/U1_2024-2025.png?raw=true">
-       <img src="https://github.com/SVCRomedenne/home/blob/main/Gal_Divers001_2025.jpg?raw=true">
-       <img src="https://github.com/SVCRomedenne/home/blob/main/Gal_Divers001_2025.jpg?raw=true">
-       <img src="https://github.com/SVCRomedenne/home/blob/main/Gal_P3001_2025.jpg?raw=true">
-       <img src="https://github.com/SVCRomedenne/home/blob/main/Gal_P3_Victoire.JPEG?raw=true">
-       <img src="https://github.com/SVCRomedenne/home/blob/main/Gal_P4001_2025.jpg?raw=true">
-       <img src="https://github.com/SVCRomedenne/home/blob/main/Gal_P4002_2025.jpg?raw=true">
-       <img src="https://github.com/SVCRomedenne/home/blob/main/Gal_P4_Victoire.JPEG?raw=true">
-       <img src="https://github.com/SVCRomedenne/home/blob/main/Gal_Prom001_2025.png?raw=true">
-       <img src="https://github.com/SVCRomedenne/home/blob/main/Gal_Prom002_2025.png?raw=true">
-       <img src="https://github.com/SVCRomedenne/home/blob/main/Gal_Tchalou2025.JPEG?raw=true">
-       <img src="https://github.com/SVCRomedenne/home/blob/main/Gal_U15_2024_2025.png?raw=true">
-       <img src="https://github.com/SVCRomedenne/home/blob/main/Gal_U15_ChampProv_2024_2025.png?raw=true">
-       <img src="https://github.com/SVCRomedenne/home/blob/main/Prom_2024-2025.png?raw=true">
-       <img src="https://github.com/SVCRomedenne/home/blob/main/Provincial2_2024-2025.png?raw=true">
-       <img src="https://github.com/SVCRomedenne/home/blob/main/Provincial3_2024-2025.png?raw=true">
-       <img src="https://github.com/SVCRomedenne/home/blob/main/Provincial4_2024-2025.png?raw=true">
-       <img src="https://github.com/SVCRomedenne/home/blob/main/U13_2024-2025.png?raw=true">
-       <img src="https://github.com/SVCRomedenne/home/blob/main/U1_2024-2025.png?raw=true">
-   </div>
+  <!-- Contenu principal -->
+  <div class="main">
+    <div class="fade-gallery">
+      <img class="active" src="https://github.com/SVCRomedenne/home/blob/main/Gal_U15_ChampProv_2024_2025.png?raw=true" />
+      <img src="https://github.com/SVCRomedenne/home/blob/main/U13_2024-2025.png?raw=true" />
+      <img src="https://github.com/SVCRomedenne/home/blob/main/U1_2024-2025.png?raw=true" />
+      <img src="https://github.com/SVCRomedenne/home/blob/main/Gal_Divers001_2025.jpg?raw=true" />
+      <img src="https://github.com/SVCRomedenne/home/blob/main/Gal_P3001_2025.jpg?raw=true" />
+      <img src="https://github.com/SVCRomedenne/home/blob/main/Gal_P4_Victoire.JPEG?raw=true" />
+    </div>
   </div>
 
-  
+  <!-- Slideshow JS -->
   <script>
     const images = document.querySelectorAll('.fade-gallery img');
     let current = 0;
@@ -241,20 +207,18 @@
       images[current].classList.remove('active');
       current = (current + 1) % images.length;
       images[current].classList.add('active');
-    }, 4000); // changement toutes les 4 secondes
+    }, 4000);
   </script>
 
-  
-
-  <!-- Footer centré -->
+  <!-- Footer -->
   <footer>
-    <p>Copyright © Romedenne 2025</p>
+    <p>&copy; Romedenne 2025</p>
     <p id="update-date"></p>
   </footer>
   <script>
-    const date = new Date();
-    const options = { year: 'numeric', month: 'long', day: 'numeric' };
-    document.getElementById("update-date").textContent = "Mise à jour le " + date.toLocaleDateString("fr-FR", options);
+    document.getElementById("update-date").textContent =
+      "Mise à jour le " + new Date().toLocaleDateString("fr-FR", { year: 'numeric', month: 'long', day: 'numeric' });
   </script>
+
 </body>
 </html>

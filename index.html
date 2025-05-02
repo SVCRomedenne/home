@@ -173,6 +173,32 @@
   border-radius: 15px;
 }
 
+.fade-gallery {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.fade-gallery img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.fade-gallery img.active {
+  opacity: 1;
+  z-index: 2;
+}
+
 .slides {
   display: flex;
   width: calc(100% * 4); /* si 6 images */
@@ -298,21 +324,23 @@
     <h2>Le club existe depuis plus de 30 ans grâce à des <br> bénévoles passionnés qui se battent chaque saison <br> pour pouvoir maintenir ce superbe sport dans notre région.</h2>
     <h2></h2>
     <h3>!!! Nos U15 Championnes Provinciales 2024-2025 !!! </h3>
-    <img src="https://github.com/SVCRomedenne/home/blob/main/Gal_U15_Champion_2_2025.JPEG?raw=true" alt="Image Actu">
+    <div class="fade-gallery">
+    <img src="https://github.com/SVCRomedenne/home/blob/main/Gal_U15_Champion_2_2025.JPEG?raw=true" alt="Image Actu" class="active">
+    <img src="https://github.com/SVCRomedenne/home/blob/main/Gal_U15_Champion_2025.JPEG?raw=true" alt="Image Actu">
    </div>
 </div>
 </div>
 
   <script>
-    const images = document.querySelectorAll('.fade-gallery img');
-    let current = 0;
+  const images = document.querySelectorAll('.fade-gallery img');
+  let current = 0;
 
-    setInterval(() => {
-      images[current].classList.remove('active');
-      current = (current + 1) % images.length;
-      images[current].classList.add('active');
-    }, 4000); // changement toutes les 4 secondes
-  </script>
+  setInterval(() => {
+    images[current].classList.remove('active');
+    current = (current + 1) % images.length;
+    images[current].classList.add('active');
+  }, 4000); // changement toutes les 4 secondes
+</script>
 
   <!-- Footer centré -->
   <footer>

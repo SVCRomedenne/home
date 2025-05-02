@@ -21,7 +21,6 @@
       min-height: 100vh;
     }
 
-    /* Barre latérale */
     nav {
       width: 220px;
       background: linear-gradient(to bottom, #0077cc, #005fa3);
@@ -90,22 +89,20 @@
     .social-icon {
       width: 32px;
       height: 32px;
-      filter: none; /* supprime le noir et blanc */
       transition: transform 0.3s ease;
     }
 
     .social-icon:hover {
       transform: scale(1.5);
-   }
+    }
 
     nav > .social-label {
       color: white;
       font-size: 14px;
       margin-top: auto;
       margin-bottom: 6px;
-   }
-	  
-    /* Contenu principal */
+    }
+
     .main {
       margin-left: 220px;
       padding: 40px;
@@ -120,12 +117,13 @@
     h2 {
       font-size: 24px;
     }
-	  
+
     .main img {
       width: 15%;
       border-radius: 6px;
       margin-bottom: 15px;
     }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -135,22 +133,18 @@
     }
 
     .gallery img {
-      width: 200px;
+      width: 100%;
       height: 150px;
-      object-fit: cover; /* pour que l'image remplisse sans se déformer */
+      object-fit: contain;
       border-radius: 10px;
       transition: transform 0.3s ease;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      z-index: 1;
-      object-fit: contain;
     }
 
     .gallery img:hover {
-      transform: scale(1);
-      z-index: 9999;
+      transform: scale(1.05);
     }
 
-    /* Footer centré en bas */
     footer {
       line-height: 1;
       position: fixed;
@@ -161,11 +155,13 @@
       color: #e0e0e0;
       text-align: center;
       padding: 10px 0;
-      margin-top: 150px; /* espace avec le contenu */
     }
 
-    /* Responsive */
     @media screen and (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+
       nav {
         width: 100%;
         height: auto;
@@ -195,17 +191,7 @@
         padding: 20px;
       }
 
-      .social-label {
-        margin-bottom: 8px;
-        text-align: center;
-      }
-
-      .social-icons {
-        justify-content: center;
-        margin-bottom: 20px;
-      }
-
-       h1 {
+      h1 {
         font-size: 28px;
       }
 
@@ -215,50 +201,45 @@
 
       footer {
         position: relative;
-        left: 0;
-        width: 100%;
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Barre de navigation -->
   <nav>
     <a href="index.html">
-    <img src="https://github.com/SVCRomedenne/home/blob/main/Logo%20calque.png?raw=true" alt="Logo SVC" />
+      <img src="https://github.com/SVCRomedenne/home/blob/main/Logo%20calque.png?raw=true" alt="Logo SVC" />
     </a>
     <ul>
       <li><a href="index.html">Accueil</a></li>
       <li><a href="Calendrier.html">Calendrier</a></li>
       <li><a href="Horaires entrainements.html">Horaires</a></li>
       <li><a href="Equipes.html">Équipes</a></li>
-      <li><a href="Evenements.html">Evènements</a></li>
+      <li><a href="Evenements.html">Évènements</a></li>
       <li><a href="Galerie.html">Galerie</a></li>
       <li><a href="Sponsors.html">Sponsors</a></li>
       <li><a href="Comite.html">Comité</a></li>
       <li><a href="Contacts.html">Contacts</a></li>
     </ul>
-<!-- Icônes Réseaux sociaux -->
-<div class="social-label">Suivez-nous :</div>
-<div class="social-icons">
-  <a href="https://www.facebook.com/svc.romedenne?locale=fr_FR" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="social-icon">
-  </a>
-  <a href="https://www.instagram.com/svc_romedenne/" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" class="social-icon">
-  </a>
-</div>  
-</nav>
+    <div class="social-label">Suivez-nous :</div>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/svc.romedenne?locale=fr_FR" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="social-icon">
+      </a>
+      <a href="https://www.instagram.com/svc_romedenne/" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" class="social-icon">
+      </a>
+    </div>
+  </nav>
 
-  <!-- Contenu principal -->
   <div class="main">
     <h1>Nos Sponsors</h1>
-    <div style="margin-top: 30px;">
-      <p>Nous remercions tous nos sponsors, sans eux notre club ne pourrait exister.</p>
-       <div class="gallery">
-	       <img src="..." loading="lazy" alt="..." />
-       	<img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_001.png?raw=true" loading="lazy" alt="Sponsors 1">
+    <p>Nous remercions tous nos sponsors, sans eux notre club ne pourrait exister.</p>
+    <div class="gallery">
+      <!-- Vos sponsors -->
+      <!-- Vous pouvez coller tous les liens d'image comme vous l'avez fait ici -->
+	<img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_001.png?raw=true" loading="lazy" alt="Sponsors 1">
         <img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_002.png?raw=true" loading="lazy" alt="Sponsors 2">
         <img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_003.png?raw=true" loading="lazy" alt="Sponsors 3">
         <img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_004.png?raw=true" loading="lazy" alt="Sponsors 4">
@@ -280,21 +261,20 @@
 	<img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_020.png?raw=true" loading="lazy" alt="Sponsors 20">
 	<img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_021.png?raw=true" loading="lazy" alt="Sponsors 21">
 	<img src="https://github.com/SVCRomedenne/home/blob/main/Sponsors_022.png?raw=true" loading="lazy" alt="Sponsors 22">
-      </div>
-  <!-- Tu peux ajouter plus de contenu ici -->
-  </div>
-  </div>	  
+	
+    </div>
   </div>
 
-  <!-- Footer centré -->
   <footer>
     <p>Copyright © Romedenne 2025</p>
     <p id="update-date"></p>
   </footer>
+
   <script>
     const date = new Date();
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
     document.getElementById("update-date").textContent = "Mise à jour le " + date.toLocaleDateString("fr-FR", options);
   </script>
+
 </body>
 </html>

@@ -154,33 +154,26 @@
       padding: 10px 0;
     }
 
-      .presentation-container {
+ .presentation-container {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start; /* aligne à gauche */
+  gap: 20px;
+  flex-wrap: nowrap;
 }
 
 .texte-club {
-  flex: 1 1 40%;
-}
-
-.carousel {
-  flex: 1 1 50%;
-  max-width: 500px;
-  overflow: hidden;
-  border-radius: 15px;
+  max-width: 600px;
+  text-align: left;
 }
 
 .fade-gallery {
-  position: relative;
   width: 100%;
-  max-width: 600px;
-  height: 400px;
-  margin: 0 auto;
-  overflow: hidden;
+  max-width: 500px;
+  height: 350px;
   border-radius: 15px;
+  overflow: hidden;
+  position: relative;
 }
 
 .fade-gallery img {
@@ -196,8 +189,9 @@
 
 .fade-gallery img.active {
   opacity: 1;
-  z-index: 2;
+  z-index: 1;
 }
+
 
 .slides {
   display: flex;
@@ -230,59 +224,71 @@
 
     /* Responsive */
     @media screen and (max-width: 768px) {
-      nav {
-        width: 100%;
-        height: auto;
-        flex-direction: column;
-        border-radius: 0;
-        position: static;
-        padding: 10px 0;
-      }
+  body {
+    flex-direction: column;
+  }
 
-      nav img {
-        width: 150px;
-        margin: 10px auto;
-      }
+  nav {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    position: static;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 10px 0;
+  }
 
-      nav ul {
-        width: 100%;
-      }
+  nav img {
+    width: 150px;
+    margin: 10px auto;
+  }
 
-      nav ul li a {
-        font-size: 16px;
-        padding: 10px 20px;
-        text-align: center;
-      }
+  nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-      .main {
-        margin-left: 0;
-        padding: 20px;
-      }
+  nav ul li a {
+    font-size: 16px;
+    padding: 10px 20px;
+    text-align: center;
+  }
 
-      .social-label {
-        margin-bottom: 8px;
-        text-align: center;
-      }
+  .main {
+    margin-left: 0;
+    padding: 20px;
+    width: 100%;
+  }
 
-      .social-icons {
-        justify-content: center;
-        margin-bottom: 20px;
-      }
+  .presentation-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-       h1 {
-        font-size: 26px;
-      }
+  .fade-gallery {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
 
-      h2 {
-        font-size: 18px;
-      }
+  .social-label {
+    text-align: center;
+    margin-bottom: 8px;
+  }
 
-      footer {
-        position: relative;
-        left: 0;
-        width: 100%;
-      }
-    }
+  .social-icons {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  footer {
+    position: relative;
+    width: 100%;
+    text-align: center;
+  }
+}
   </style>
 </head>
 <body>
@@ -322,12 +328,13 @@
     <h2>Le SVC Romedenne est un club familliale de village qui grandit <br> de saison en saison.</h2>
     <h2>Il accueille depuis plusieurs années de nombreuses équipes <br> dames ! Mais c'est aussi un club formateur de jeunes.</h2>
     <h2>Le club existe depuis plus de 30 ans grâce à des <br> bénévoles passionnés qui se battent chaque saison <br> pour pouvoir maintenir ce superbe sport dans notre région.</h2>
-    <h2></h2>
     <h3>!!! Nos U15 Championnes Provinciales 2024-2025 !!! </h3>
-    <div class="fade-gallery">
+  </div>
+
+  <div class="fade-gallery">
     <img src="https://github.com/SVCRomedenne/home/blob/main/Gal_U15_Champion_2_2025.JPEG?raw=true" alt="Image Actu" class="active">
     <img src="https://github.com/SVCRomedenne/home/blob/main/Gal_U15_Champion_2025.JPEG?raw=true" alt="Image Actu">
-   </div>
+  </div>
 </div>
 </div>
 
